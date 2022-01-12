@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="2FA" xml:space="preserve">
+    <value>雙重認證</value>
+  </data>
+  <data name="2FA_AUTHENTICATION_ADD_AUTHENTICATOR_APP" xml:space="preserve">
+    <value>添加身份認證應用</value>
+  </data>
+  <data name="2FA_AUTHENTICATION_ADD_RESET_APP" xml:space="preserve">
+    <value>重置身份認證應用</value>
+  </data>
+  <data name="2FA_AUTHENTICATION_ADD_SETUP_APP" xml:space="preserve">
+    <value>設置身份認證應用</value>
+  </data>
+  <data name="2FA_AUTHENTICATION_TITLE" xml:space="preserve">
+    <value>雙重認證 (2FA)</value>
+  </data>
+  <data name="2FA_NO_CODES_LEFT" xml:space="preserve">
+    <value>您已經沒有恢復代碼了。</value>
+  </data>
+  <data name="2FA_NO_CODES_LEFT_TEXT" xml:space="preserve">
+    <value>您必須生成一組新的恢復代碼才能繼續使用恢復代碼登錄。</value>
+  </data>
+  <data name="2FA_N_CODES_LEFT" xml:space="preserve">
+    <value>您還剩{0}個恢復代碼。</value>
+  </data>
+  <data name="2FA_N_CODES_LEFT_TEXT" xml:space="preserve">
+    <value>您應當創建一組新的恢復代碼。</value>
+  </data>
+  <data name="2FA_ONE_CODES_LEFT" xml:space="preserve">
+    <value>您當前只剩一個恢復代碼了。</value>
+  </data>
+  <data name="2FA_ONE_CODES_LEFT_TEXT" xml:space="preserve">
+    <value>您可以產生一組新的恢復代碼。</value>
+  </data>
+  <data name="2FA_STATUS_BROWSER_FORGET" xml:space="preserve">
+    <value>當前流覽器已被忘記。當您下次使用此流覽器登錄時將會提示您輸入雙因素認證代碼。</value>
+  </data>
+  <data name="ACCESS_DENIED" xml:space="preserve">
+    <value>訪問被拒絕</value>
+  </data>
+  <data name="ACCESS_DENIED_TEXT" xml:space="preserve">
+    <value>您沒有訪問此資源的許可權。</value>
+  </data>
+  <data name="ACCOUNT_CLICK_LOGIN_LINK" xml:space="preserve">
+    <value>點擊登入按鈕</value>
+  </data>
+  <data name="ACCOUNT_LOGIN" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_2FA" xml:space="preserve">
+    <value>雙因素認證</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_2FA_NO_AUTHENTICATOR_DEVICE" xml:space="preserve">
+    <value>無法使用您的認證設備？您可以</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_2FA_RECOVERY_CODE_TEXT" xml:space="preserve">
+    <value>使用恢復代碼登錄</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_2FA_REMEMBER_MC" xml:space="preserve">
+    <value>記住這台電腦</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_2FA_TEXT" xml:space="preserve">
+    <value>您的登錄受身份認證應用保護。請在下面輸入您的身份認證代碼。</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_AUTHENTICATOR_CODE" xml:space="preserve">
+    <value>身份認證代碼</value>
+  </data>
+  <data name="ACCOUNT_LOGIN_WITH_AZURE_AD" xml:space="preserve">
+    <value>使用Azure AD登錄</value>
+  </data>
+  <data name="ACCOUNT_NO_EXTERNAL_LOGINS" xml:space="preserve">
+    <value>當前沒有配置認證服務。關於設置此ASP.NET應用以支援外部服務的細節可參考https://go.microsoft.com/fwlink/?LinkID=532715。</value>
+  </data>
+  <data name="ACCOUNT_RECOVERY_CODE" xml:space="preserve">
+    <value>恢復代碼</value>
+  </data>
+  <data name="ACCOUNT_RECOVERY_CODE_REQUIRED" xml:space="preserve">
+    <value>必須填寫恢復代碼</value>
+  </data>
+  <data name="ACCOUNT_RECOVERY_CODE_VERIFICATION" xml:space="preserve">
+    <value>恢復代碼驗證</value>
+  </data>
+  <data name="ACCOUNT_RECOVERY_CODE_VERIFICATION_TEXT" xml:space="preserve">
+    <value>您已經使用了恢復代碼登錄。在您登錄時提供身份認證應用代碼或禁用雙因素認證並再次登錄之前不會記住這次登錄。</value>
+  </data>
+  <data name="ACCOUNT_USE_ANOTHER_SERVICE_LOG_IN" xml:space="preserve">
+    <value>使用其他服務登錄。</value>
+  </data>
+  <data name="ACCOUNT_USE_LOCAL_ACCOUNT_TO_LOG_IN" xml:space="preserve">
+    <value>使用本地帳號登錄。</value>
+  </data>
+  <data name="AND" xml:space="preserve">
+    <value>與</value>
+  </data>
+  <data name="AUTHENTICATOR_APP" xml:space="preserve">
+    <value>身份認證應用</value>
+  </data>
+  <data name="CHANGE_PASSWORD" xml:space="preserve">
+    <value>修改密碼</value>
+  </data>
+  <data name="CHANGE_PASSWORD_STATUS" xml:space="preserve">
+    <value>您的密碼已修改成功。</value>
+  </data>
+  <data name="CODE_REQUIRED" xml:space="preserve">
+    <value>必須輸入代碼</value>
+  </data>
+  <data name="ConcurrencyFailure" xml:space="preserve">
+    <value>樂觀併發失敗，對象已被更改。</value>
+    <comment>Error when optimistic concurrency fails</comment>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP" xml:space="preserve">
+    <value>配置身份認證應用</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_DOWNLOAD_TEXT" xml:space="preserve">
+    <value>下載適用於以下設備的身份認證應用（例如Microsoft Authenticator）：</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_GOOGLE_TEXT" xml:space="preserve">
+    <value>或適用於以下設備的Google Authenticator：</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_SCAN1" xml:space="preserve">
+    <value>掃描二維碼或將該秘鑰</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_SCAN2" xml:space="preserve">
+    <value>在您的雙因素認證應用中輸入。空格與大小寫都不會影響認證。</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_SCAN_ALERT" xml:space="preserve">
+    <value>要啟用二維碼生成，請閱讀我們的</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_SCAN_ALERT_DETAILS" xml:space="preserve">
+    <value>一旦您掃描了二維碼或輸入了以上秘鑰，您的身份認證應用將會給您提供一個唯一代碼。請在下面的確認框中輸入此代碼。</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_SCAN_ALERT_LINK" xml:space="preserve">
+    <value>文檔</value>
+  </data>
+  <data name="CONFIGURE_AUTHENTICATOR_APP_STEPS" xml:space="preserve">
+    <value>要使用身份認證應用，請按以下步驟進行：</value>
+  </data>
+  <data name="CONFIRM_DELETE" xml:space="preserve">
+    <value>確認刪除</value>
+  </data>
+  <data name="CONFIRM_EMAIL" xml:space="preserve">
+    <value>確認電子郵箱</value>
+  </data>
+  <data name="CONFIRM_EMAIL_TEXT" xml:space="preserve">
+    <value>感謝您確認電子郵箱。</value>
+  </data>
+  <data name="CONFIRM_PASSWORD" xml:space="preserve">
+    <value>確認密碼</value>
+  </data>
+  <data name="CONFIRM_PASSWORD_NOT_MATCHING" xml:space="preserve">
+    <value>密碼與確認密碼不匹配。</value>
+  </data>
+  <data name="CONFIRM_YOUR_EMAIL" xml:space="preserve">
+    <value>確認您的電子郵箱</value>
+  </data>
+  <data name="CONFIRM_YOUR_EMAIL_TEXT" xml:space="preserve">
+    <value>請&lt;a href='{0}'&gt;點擊此處&lt;/a&gt;確認您的帳號。</value>
+  </data>
+  <data name="CONSENT_APPLICATION_ACCESS" xml:space="preserve">
+    <value>應用訪問</value>
+  </data>
+  <data name="CONSENT_IS_CHECK_UNREQUIRED" xml:space="preserve">
+    <value>取消選擇您不希望授予的許可權。</value>
+  </data>
+  <data name="CONSENT_IS_REQUESTING_YOUR_PERMISSION" xml:space="preserve">
+    <value>正在請求您的許可權</value>
+  </data>
+  <data name="CONSENT_NO_NOT_ALLOWED" xml:space="preserve">
+    <value>否，不允許</value>
+  </data>
+  <data name="CONSENT_PERSONAL_INFORMATION" xml:space="preserve">
+    <value>個人資訊</value>
+  </data>
+  <data name="CONSENT_REMEMBER_MY_DECISION" xml:space="preserve">
+    <value>記住我的選擇</value>
+  </data>
+  <data name="CONSENT_REQUIRED" xml:space="preserve">
+    <value>（必需）</value>
+  </data>
+  <data name="CONSENT_YES_ALLOWED" xml:space="preserve">
+    <value>是的，允許</value>
+  </data>
+  <data name="CREATE_A_NEW_ACCOUNT" xml:space="preserve">
+    <value>創建新用戶。</value>
+  </data>
+  <data name="CURRENT_PASSWORD" xml:space="preserve">
+    <value>當前密碼</value>
+  </data>
+  <data name="CURRENT_PASSWORD_REQUIRED" xml:space="preserve">
+    <value>必須填寫當前密碼</value>
+  </data>
+  <data name="DefaultError" xml:space="preserve">
+    <value>出現錯誤了！</value>
+    <comment>Default identity result error message</comment>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="DELETE_PERSONAL_DATA" xml:space="preserve">
+    <value>刪除個人資料</value>
+  </data>
+  <data name="DELETE_PERSONAL_DATA_AND_CLOSE" xml:space="preserve">
+    <value>刪除資料並關閉我的帳號</value>
+  </data>
+  <data name="DELETE_PERSONAL_DATA_TEXT" xml:space="preserve">
+    <value>刪除此資料將永久刪除此帳號，且此操作無法恢復。</value>
+  </data>
+  <data name="DISABLE_2FA" xml:space="preserve">
+    <value>禁用雙因素認證（2FA）</value>
+  </data>
+  <data name="DISABLE_2FA_BUTTON" xml:space="preserve">
+    <value>禁用雙因素認證</value>
+  </data>
+  <data name="DISABLE_2FA_STATUS" xml:space="preserve">
+    <value>雙因素認證已被禁用。您可以通過設置身份認證應用來重新啟用雙因素認證。</value>
+  </data>
+  <data name="DISABLE_2FA_TEXT_DETAILS" xml:space="preserve">
+    <value>禁用雙因素認證不會改變在身份認證應用中的秘鑰。如果您希望修改身份認證應用中的秘鑰，您應當</value>
+  </data>
+  <data name="DISABLE_2FA_TEXT_DETAILS_LINK" xml:space="preserve">
+    <value>重置您的認證秘鑰。</value>
+  </data>
+  <data name="DISABLE_2FA_TEXT_HEADER" xml:space="preserve">
+    <value>此操作僅禁用雙因素認證。</value>
+  </data>
+  <data name="DOWNLOAD" xml:space="preserve">
+    <value>下載</value>
+  </data>
+  <data name="DOWNLOAD_YOUR_DATA" xml:space="preserve">
+    <value>下載您的數據</value>
+  </data>
+  <data name="DuplicateEmail" xml:space="preserve">
+    <value>電子郵箱'{0}'已被佔用。</value>
+    <comment>Error for duplicate emails</comment>
+  </data>
+  <data name="DuplicateRoleName" xml:space="preserve">
+    <value>角色名'{0}'已被佔用。</value>
+    <comment>Error for duplicate roles</comment>
+  </data>
+  <data name="DuplicateUserName" xml:space="preserve">
+    <value>用戶名'{0}'已被佔用。</value>
+    <comment>Error for duplicate user names</comment>
+  </data>
+  <data name="EMAIL" xml:space="preserve">
+    <value>電子郵箱</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>電子郵箱不合法</value>
+  </data>
+  <data name="EMAIL_REQUIRED" xml:space="preserve">
+    <value>必須輸入電子郵箱</value>
+  </data>
+  <data name="EXTERNAL_LOGINS" xml:space="preserve">
+    <value>外部登錄</value>
+  </data>
+  <data name="EXTERNAL_LOGINS_ADD_ANOTHER_SERVICE_TO_LOGIN" xml:space="preserve">
+    <value>新增其他登錄服務。</value>
+  </data>
+  <data name="EXTERNAL_LOGINS_REGISTERED_LOGIN" xml:space="preserve">
+    <value>已註冊的登錄服務</value>
+  </data>
+  <data name="EXTERNAL_LOGINS_TITLE" xml:space="preserve">
+    <value>管理您的外部登錄服務</value>
+  </data>
+  <data name="EXTERNAL_LOGIN_ASSOCIATE_ACCOUNT" xml:space="preserve">
+    <value>關聯您的{0}帳號</value>
+  </data>
+  <data name="EXTERNAL_LOGIN_TEXT" xml:space="preserve">
+    <value>您已通過{0}成功認證。請在下面輸入您用於當前網站的電子郵箱，並點擊“註冊”按鈕完成登錄。</value>
+  </data>
+  <data name="EXTERNAL_PROVIDER_ERROR" xml:space="preserve">
+    <value>外部服務出錯：{0}</value>
+  </data>
+  <data name="EXTERNAL_PROVIDER_ERROR_CONFIRMATION" xml:space="preserve">
+    <value>在確認過程中載入外部登錄資訊錯誤。</value>
+  </data>
+  <data name="EXTERNAL_PROVIDER_ERROR_INFO" xml:space="preserve">
+    <value>載入外部登錄資訊發生錯誤。</value>
+  </data>
+  <data name="FIDO2_ADD_A_KEY" xml:space="preserve">
+    <value>新增FIDO2秘鑰</value>
+  </data>
+  <data name="FIDO2_COULD_NOT_VERIFY_ASSERTION" xml:space="preserve">
+    <value>無法驗證斷言</value>
+  </data>
+  <data name="FIDO2_LOGIN_WITH_MFA" xml:space="preserve">
+    <value>使用FIDO2多因素認證登錄</value>
+  </data>
+  <data name="FIDO2_MULTI_FACTOR_AUTHENTICATION" xml:space="preserve">
+    <value>FIDO2多因素認證</value>
+  </data>
+  <data name="FIDO2_REGISTRATION_ERROR" xml:space="preserve">
+    <value>無法在流覽器中創建憑證。可能是因為該用戶名已被您的身份驗證器所註冊。請更換用戶名或身份驗證器。</value>
+  </data>
+  <data name="FIDO2_SUPPORTED_BROWSERS" xml:space="preserve">
+    <value>支持的流覽器</value>
+  </data>
+  <data name="FIDO2_TAP_YOUR_SECURITY_KEY_TO_FINISH_REGISTRATION" xml:space="preserve">
+    <value>點擊您的安全金鑰以完成註冊。</value>
+  </data>
+  <data name="FIDO2_TAP_YOUR_SECURITY_KEY_TO_LOGIN" xml:space="preserve">
+    <value>點擊您的安全金鑰完成登錄。</value>
+  </data>
+  <data name="FIDO2_UNABLE_TO_LOAD_2FA_AUTHENTICATED_USER" xml:space="preserve">
+    <value>無法載入雙因素認證的用戶。</value>
+  </data>
+  <data name="FIDO2_UNKNOWN_CREDENTIALS" xml:space="preserve">
+    <value>未知的憑證</value>
+  </data>
+  <data name="FIDO2_USERNAME" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="FIDO2_USERNAME_NOT_REGISTERED" xml:space="preserve">
+    <value>用戶名沒有註冊</value>
+  </data>
+  <data name="FIDO2_USER_NOTFOUND" xml:space="preserve">
+    <value>無法載入ID為'{0}'的用戶。</value>
+  </data>
+  <data name="FIDO2_WEBAUTHN_NOT_SUPPORTED" xml:space="preserve">
+    <value>請注意：您的流覽器很可能還不支援Web身份驗證(WebAuthn)技術。</value>
+  </data>
+  <data name="FIRST_NAME" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="FORGET_THIS_BROWSER" xml:space="preserve">
+    <value>忘記此流覽器</value>
+  </data>
+  <data name="FORGOT_PASSWORD_CONFIRMATION" xml:space="preserve">
+    <value>忘記密碼確認</value>
+  </data>
+  <data name="FORGOT_PASSWORD_CONFIRMATION_TEXT" xml:space="preserve">
+    <value>請檢查您的電子郵箱以重置密碼。</value>
+  </data>
+  <data name="FORGOT_YOUR_PASSWORD" xml:space="preserve">
+    <value>忘記了密碼？</value>
+  </data>
+  <data name="FORGOT_YOUR_PASSWORD_ENTER_EMAIL" xml:space="preserve">
+    <value>輸入您的電子郵箱。</value>
+  </data>
+  <data name="GENERATE" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="GENERATE_2FA_RECOVERY_CODES" xml:space="preserve">
+    <value>生成雙因素認證（2FA）恢復代碼</value>
+  </data>
+  <data name="GENERATE_2FA_RECOVERY_CODES_INFO_LOSE" xml:space="preserve">
+    <value>如果您丟失了您的設備並且沒有恢復代碼，您將無法再次登錄您的帳號。</value>
+  </data>
+  <data name="GENERATE_2FA_RECOVERY_CODES_SAFE_PLACE" xml:space="preserve">
+    <value>將這些代碼放在一個安全的場所。</value>
+  </data>
+  <data name="GENERATE_2FA_RECOVERY_CODES_TEXT" xml:space="preserve">
+    <value>生成新的恢復代碼不會改變在身份認證應用中使用的秘鑰。如果您希望改變身份認證應用中使用的秘鑰，您應當</value>
+  </data>
+  <data name="GENERATE_2FA_RECOVERY_CODES_TEXT_LINK" xml:space="preserve">
+    <value>重置您的認證秘鑰。</value>
+  </data>
+  <data name="GENERATE_RECOVERY_CODES" xml:space="preserve">
+    <value>生成恢復代碼</value>
+  </data>
+  <data name="GIVEN_NAME" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="INCORRECT_PASSWORD" xml:space="preserve">
+    <value>密碼不正確</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>電子郵箱'{0}'非法。</value>
+    <comment>Invalid email</comment>
+  </data>
+  <data name="InvalidManagerType" xml:space="preserve">
+    <value>{0}類型必須繼承自{1}&lt;{2}&gt;。</value>
+    <comment>Error when the manager type is not derived correctly</comment>
+  </data>
+  <data name="InvalidPasswordHasherCompatibilityMode" xml:space="preserve">
+    <value>所提供的PasswordHasherCompatibilityMode非法。</value>
+    <comment>Error when the password hasher doesn't understand the format it's being asked to produce.</comment>
+  </data>
+  <data name="InvalidPasswordHasherIterationCount" xml:space="preserve">
+    <value>反覆運算次數必須是正整數。</value>
+    <comment>Error when the iteration count is &lt; 1.</comment>
+  </data>
+  <data name="InvalidRoleName" xml:space="preserve">
+    <value>角色名{0}非法。</value>
+    <comment>Error for invalid role names</comment>
+  </data>
+  <data name="InvalidToken" xml:space="preserve">
+    <value>權杖非法。</value>
+    <comment>Error when a token is not recognized</comment>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>用戶名'{0}'非法，只允許包含字母或數位。</value>
+    <comment>User names can only contain letters or digits</comment>
+  </data>
+  <data name="INVALID_AUTHENTICATOR_CODE" xml:space="preserve">
+    <value>身份認證代碼不合法。</value>
+  </data>
+  <data name="INVALID_CODE" xml:space="preserve">
+    <value>代碼不合法。</value>
+  </data>
+  <data name="INVALID_CONSENT_PERMISSION" xml:space="preserve">
+    <value>您必須選擇至少一項許可權。</value>
+  </data>
+  <data name="INVALID_CONSENT_SELECTION" xml:space="preserve">
+    <value>選擇不合法</value>
+  </data>
+  <data name="INVALID_LOGIN_ATTEMPT" xml:space="preserve">
+    <value>登錄失敗。</value>
+  </data>
+  <data name="INVALID_RECOVERY_CODE" xml:space="preserve">
+    <value>您輸入的恢復代碼不合法。</value>
+  </data>
+  <data name="INVALID_VERFICATION_CODE" xml:space="preserve">
+    <value>驗證碼不合法。</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="LAST_NAME" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="LOCKED_OUT" xml:space="preserve">
+    <value>已鎖定</value>
+  </data>
+  <data name="LOCKED_OUT_TEXT" xml:space="preserve">
+    <value>此帳號已被鎖定，請稍後再試。</value>
+  </data>
+  <data name="LoginAlreadyAssociated" xml:space="preserve">
+    <value>該帳號已經與用戶關聯。</value>
+    <comment>Error when a login already linked</comment>
+  </data>
+  <data name="LOGIN_USE" xml:space="preserve">
+    <value>登入用</value>
+  </data>
+  <data name="LOGOUT" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="LOGOUT_BTN" xml:space="preserve">
+    <value>按這裡登出</value>
+  </data>
+  <data name="LOGOUT_RETURN_TO" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="LOGOUT_TEXT" xml:space="preserve">
+    <value>您已經從當前應用註銷登錄。</value>
+  </data>
+  <data name="MANAGE_CHANGE_ACCOUNT_SETTINGS" xml:space="preserve">
+    <value>修改您的帳號設置</value>
+  </data>
+  <data name="MANAGE_YOUR_ACCOUNT" xml:space="preserve">
+    <value>管理您的帳號</value>
+  </data>
+  <data name="MustCallAddIdentity" xml:space="preserve">
+    <value>必須在ServiceCollection上調用AddIdentity。</value>
+    <comment>Error when AddIdentity is not called</comment>
+  </data>
+  <data name="NEW_PASSWORD" xml:space="preserve">
+    <value>新密碼</value>
+  </data>
+  <data name="NEW_PASSWORD_REQUIRED" xml:space="preserve">
+    <value>必須輸入新密碼</value>
+  </data>
+  <data name="NoPersonalDataProtector" xml:space="preserve">
+    <value>IPersonalDataProtector服務沒有註冊，這在ProtectPersonalData = true時是必需的。</value>
+    <comment>Error when there is no IPersonalDataProtector</comment>
+  </data>
+  <data name="NoRoleType" xml:space="preserve">
+    <value>RoleType未指定，請嘗試使用AddRoles&lt;TRole&gt;()。</value>
+    <comment>Error when the IdentityBuilder.RoleType was not specified</comment>
+  </data>
+  <data name="NoTokenProvider" xml:space="preserve">
+    <value>沒有註冊名稱為'{1}'的IUserTwoFactorTokenProvider&lt;{0}&gt;。</value>
+    <comment>Error when there is no IUserTwoFactorTokenProvider</comment>
+  </data>
+  <data name="NullSecurityStamp" xml:space="preserve">
+    <value>用戶的SecurityStamp不能為空。</value>
+    <comment>Error when a user's security stamp is null.</comment>
+  </data>
+  <data name="OR" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="PASSWORD" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="PasswordMismatch" xml:space="preserve">
+    <value>密碼不正確。</value>
+    <comment>Error when a password doesn't match</comment>
+  </data>
+  <data name="PasswordRequiresDigit" xml:space="preserve">
+    <value>密碼必須包含至少一個數位('0'-'9')。</value>
+    <comment>Error when passwords do not have a digit</comment>
+  </data>
+  <data name="PasswordRequiresLower" xml:space="preserve">
+    <value>密碼必須包含至少一個小寫字母('a'-'z')。</value>
+    <comment>Error when passwords do not have a lowercase letter</comment>
+  </data>
+  <data name="PasswordRequiresNonAlphanumeric" xml:space="preserve">
+    <value>密碼必須包含只少一個不是字母或數位的字元。</value>
+    <comment>Error when password does not have enough non alphanumeric characters</comment>
+  </data>
+  <data name="PasswordRequiresUniqueChars" xml:space="preserve">
+    <value>密碼必須包含至少{0}個不同的字元。</value>
+    <comment>Error message for passwords that are based on similar characters</comment>
+  </data>
+  <data name="PasswordRequiresUpper" xml:space="preserve">
+    <value>密碼必須包含至少一個大寫字母('A'-'Z')。</value>
+    <comment>Error when passwords do not have an uppercase letter</comment>
+  </data>
+  <data name="PasswordTooShort" xml:space="preserve">
+    <value>密碼至少要包含{0}個字元。</value>
+    <comment>Error message for passwords that are too short</comment>
+  </data>
+  <data name="PASSWORD_REQUIRED" xml:space="preserve">
+    <value>必須輸入密碼</value>
+  </data>
+  <data name="PERSONAL_DATA" xml:space="preserve">
+    <value>個人資料</value>
+  </data>
+  <data name="PERSONAL_DATA_DELETEINFO" xml:space="preserve">
+    <value>刪除此資料將永久刪除您的帳號，且此操作無法恢復。</value>
+  </data>
+  <data name="PERSONAL_DATA_INFO" xml:space="preserve">
+    <value>您的帳號包含您提供給我們的個人資料。此頁面允許您下載或刪除這些資料。</value>
+  </data>
+  <data name="PHONE_NUMBER" xml:space="preserve">
+    <value>電話號碼</value>
+  </data>
+  <data name="PROFILE" xml:space="preserve">
+    <value>個人資訊</value>
+  </data>
+  <data name="RecoveryCodeRedemptionFailed" xml:space="preserve">
+    <value>贖回恢復代碼失敗。</value>
+    <comment>Error when a recovery code is not redeemed.</comment>
+  </data>
+  <data name="REGISTER" xml:space="preserve">
+    <value>註冊</value>
+  </data>
+  <data name="REGISTER_AS_NEW_USER" xml:space="preserve">
+    <value>註冊新用戶</value>
+  </data>
+  <data name="REMEMBER_BROWSER" xml:space="preserve">
+    <value>記住流覽器</value>
+  </data>
+  <data name="REMEMBER_ME" xml:space="preserve">
+    <value>記住我</value>
+  </data>
+  <data name="REMOVE" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="RESET" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="RESET_AUTHENTICATOR_INFO" xml:space="preserve">
+    <value>如果您重置了身份認證應用的秘鑰，您必須重新配置身份認證應用才可以正常工作。</value>
+  </data>
+  <data name="RESET_AUTHENTICATOR_KEY" xml:space="preserve">
+    <value>重置身份認證秘鑰</value>
+  </data>
+  <data name="RESET_AUTHENTICATOR_STATUS" xml:space="preserve">
+    <value>您的身份認證應用秘鑰已被重置。您需要使用新的秘鑰重新配置身份認證應用。</value>
+  </data>
+  <data name="RESET_AUTHENTICATOR_TEXT" xml:space="preserve">
+    <value>在您完成驗證身份認證應用之前將會禁用雙因素認證。如果您沒有將身份認證應用配置完畢，您可能會無法再次訪問您的帳號。</value>
+  </data>
+  <data name="RESET_PASSWORD" xml:space="preserve">
+    <value>重置密碼</value>
+  </data>
+  <data name="RESET_PASSWORD_CLICK_HERE_TO_LOGIN" xml:space="preserve">
+    <value>按一下此處登錄</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION" xml:space="preserve">
+    <value>重置密碼確認</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_CLICK_HERE" xml:space="preserve">
+    <value>點擊此處登錄</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_TEXT1" xml:space="preserve">
+    <value>您的密碼已被重置。請</value>
+  </data>
+  <data name="RESET_PASSWORD_EMAIL_TEXT" xml:space="preserve">
+    <value>請&lt;a href='{0}'&gt;點擊此處&lt;/a&gt;重置密碼。</value>
+  </data>
+  <data name="RESET_PASSWORD_YOUR_PASSWORD_HAS_BEEN_RESET" xml:space="preserve">
+    <value>您的密碼已被重置。</value>
+  </data>
+  <data name="RESET_RECOVERY_CODES" xml:space="preserve">
+    <value>重置恢復代碼</value>
+  </data>
+  <data name="RESET_YOUR_PASSWORD" xml:space="preserve">
+    <value>重置您的密碼</value>
+  </data>
+  <data name="ROLE" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="RoleNotFound" xml:space="preserve">
+    <value>角色{0}不存在。</value>
+    <comment>Error when a role does not exist</comment>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SEND_VERIFICATION_CODE" xml:space="preserve">
+    <value>發送驗證碼</value>
+  </data>
+  <data name="SEND_VERIFICATION_CODE_SELECT" xml:space="preserve">
+    <value>選擇雙因素認證提供程式：</value>
+  </data>
+  <data name="SEND_VERIFICATION_EMAIL" xml:space="preserve">
+    <value>發送驗證郵件</value>
+  </data>
+  <data name="SET_PASSWORD" xml:space="preserve">
+    <value>設置密碼</value>
+  </data>
+  <data name="SET_PASSWORD_STATUS" xml:space="preserve">
+    <value>您的密碼設置成功。</value>
+  </data>
+  <data name="SET_PASSWORD_TEXT" xml:space="preserve">
+    <value>您還沒有設置當前網站的用戶名和密碼。您先要創建一個本地帳號才能在不使用外部服務的情況下登錄。</value>
+  </data>
+  <data name="SET_YOUR_PASSWORD" xml:space="preserve">
+    <value>設置您的密碼</value>
+  </data>
+  <data name="STATUS_EXTERNAL_LOGIN_ADDED" xml:space="preserve">
+    <value>外部登錄添加成功。</value>
+  </data>
+  <data name="STATUS_EXTERNAL_LOGIN_REMOVED" xml:space="preserve">
+    <value>外部登錄已被刪除。</value>
+  </data>
+  <data name="STATUS_GENERATE_CODES" xml:space="preserve">
+    <value>您已生成了新的恢復代碼。</value>
+  </data>
+  <data name="STATUS_MESSAGE_PROFILE_HAS_BEEN_RESET" xml:space="preserve">
+    <value>您的個人資訊更新成功</value>
+  </data>
+  <data name="STATUS_PROFILE_UPDATED" xml:space="preserve">
+    <value>您的個人資訊更新成功</value>
+  </data>
+  <data name="STATUS_UPDATE_PROFILE_EMAIL_SEND" xml:space="preserve">
+    <value>已發送驗證郵件，請檢查您的電子郵箱。</value>
+  </data>
+  <data name="StoreNotIProtectedUserStore" xml:space="preserve">
+    <value>當ProtectPersonalData = true時存儲需要IProtectedUserStore&lt;TUser&gt;而未實現。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIQueryableRoleStore" xml:space="preserve">
+    <value>存儲未實現IQueryableRoleStore&lt;TRole&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIQueryableUserStore" xml:space="preserve">
+    <value>存儲未實現IQueryableUserStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIRoleClaimStore" xml:space="preserve">
+    <value>存儲未實現IRoleClaimStore&lt;TRole&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserAuthenticationTokenStore" xml:space="preserve">
+    <value>存儲未實現IUserAuthenticationTokenStore&lt;User&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserAuthenticatorKeyStore" xml:space="preserve">
+    <value>存儲未實現IUserAuthenticatorKeyStore&lt;User&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserClaimStore" xml:space="preserve">
+    <value>存儲未實現IUserClaimStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserConfirmationStore" xml:space="preserve">
+    <value>存儲未實現IUserConfirmationStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserEmailStore" xml:space="preserve">
+    <value>存儲未實現IUserEmailStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserLockoutStore" xml:space="preserve">
+    <value>存儲未實現IUserLockoutStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserLoginStore" xml:space="preserve">
+    <value>存儲未實現IUserLoginStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserPasswordStore" xml:space="preserve">
+    <value>存儲未實現IUserPasswordStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserPhoneNumberStore" xml:space="preserve">
+    <value>存儲未實現IUserPhoneNumberStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserRoleStore" xml:space="preserve">
+    <value>存儲未實現IUserRoleStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserSecurityStampStore" xml:space="preserve">
+    <value>存儲未實現IUserSecurityStampStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserTwoFactorRecoveryCodeStore" xml:space="preserve">
+    <value>存儲未實現IUserTwoFactorRecoveryCodeStore&lt;User&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="StoreNotIUserTwoFactorStore" xml:space="preserve">
+    <value>存儲未實現IUserTwoFactorStore&lt;TUser&gt;。</value>
+    <comment>Error when the store does not implement this interface</comment>
+  </data>
+  <data name="SUBMIT" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="SURNAME" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
+    <value>{0}的長度必須在{2}-{1}個字元之間。</value>
+  </data>
+  <data name="TWOFACTORCODE_REQUIRED" xml:space="preserve">
+    <value>必須填寫雙因素代碼</value>
+  </data>
+  <data name="UNSUCCESSFUL_LOGIN_WITH_SERVICE" xml:space="preserve">
+    <value>外部登錄服務未成功。</value>
+  </data>
+  <data name="UPDATE_PASSWORD" xml:space="preserve">
+    <value>更新密碼</value>
+  </data>
+  <data name="UserAlreadyHasPassword" xml:space="preserve">
+    <value>使用者已經設置了密碼。</value>
+    <comment>Error when AddPasswordAsync called when a user already has a password</comment>
+  </data>
+  <data name="UserAlreadyInRole" xml:space="preserve">
+    <value>用戶已在角色'{0}'中。</value>
+    <comment>Error when a user is already in a role</comment>
+  </data>
+  <data name="UserLockedOut" xml:space="preserve">
+    <value>用戶被鎖定。</value>
+    <comment>Error when a user is locked out</comment>
+  </data>
+  <data name="UserLockoutNotEnabled" xml:space="preserve">
+    <value>該用戶未啟用鎖定。</value>
+    <comment>Error when lockout is not enabled</comment>
+  </data>
+  <data name="USERNAME" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="UserNameNotFound" xml:space="preserve">
+    <value>用戶{0}不存在。</value>
+    <comment>Error when a user does not exist</comment>
+  </data>
+  <data name="UserNotInRole" xml:space="preserve">
+    <value>用戶不在角色'{0}'中。</value>
+    <comment>Error when a user is not in the role</comment>
+  </data>
+  <data name="USER_NOTFOUND" xml:space="preserve">
+    <value>無法載入ID為'{0}'的用戶。</value>
+  </data>
+  <data name="USER_POST" xml:space="preserve">
+    <value>職位</value>
+  </data>
+  <data name="VERIFICATION_CODE" xml:space="preserve">
+    <value>驗證碼</value>
+  </data>
+  <data name="VERIFICATION_CODE_REQUIRED" xml:space="preserve">
+    <value>必須填寫驗證碼</value>
+  </data>
+  <data name="VERIFY" xml:space="preserve">
+    <value>驗證</value>
+  </data>
+  <data name="WOULD_YOU_LIKE_TO_LOGOUT" xml:space="preserve">
+    <value>確定要註銷IdentityServer嗎？</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>是的</value>
+  </data>
+</root>

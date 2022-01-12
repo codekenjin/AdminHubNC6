@@ -1,0 +1,354 @@
+﻿@using Microsoft.AspNetCore.Localization
+@{
+    var CalendarPath = "/fullcalendar";
+}
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    ViewData["Title"] = "Calendar";
+}
+
+<link href='@CalendarPath/main.css' rel='stylesheet' />
+<script src='@CalendarPath/main.js'></script>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "__AjaxAntiForgeryForm" }))
+{
+    @Html.AntiForgeryToken()
+}
+
+<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><span id="eventTitle"></span></h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="pDetails"></p>
+            </div>
+            <div class="modal-footer">
+                <div class="container">
+                    <div class="float-left mr-2">
+                        <button id="btnDelete" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button>
+                    </div>
+                    <div class="float-left">
+                        <button id="btnEdit" class="btn btn-success">
+                            <span class="glyphicon glyphicon-pencil"></span> Edit
+                        </button>
+                    </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModalSave" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Save Event</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="col-md-12 form-horizontal">
+                    <input type="hidden" id="hdEventID" value="0" />
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="txtSubject" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Start</label>
+                        <div class="input-group date" id="dtp1" data-target-input="nearest">
+                            <input type="text" id="txtStart" class="form-control datetimepicker-input" data-target="#dtp1" />
+                            <div class="input-group-append" data-target="#dtp1" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label><input type="checkbox" id="chkIsFullDay" checked="checked" />  Is Full Day event</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="divEndDate" style="display:none">
+                        <label>End</label>
+                        <div class="input-group date" id="dtp2" data-target-input="nearest">
+                            <input type="text" id="txtEnd" class="form-control datetimepicker-input" data-target="#dtp2" />
+                            <div class="input-group-append" data-target="#dtp2" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="txtDescription" rows="3" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Theme Color</label>
+                        <select id="ddThemeColor" class="form-control">
+                            <option value="">Default</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="black">Black</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </div>
+                    <button type="button" id="btnSave" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='calendar'></div>
+
+<script>
+    var selectedEvent = null;
+    var calendarEl = document.getElementById('calendar');
+    var calendar;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        FetchEventAndRenderCalendar();
+
+        function FetchEventAndRenderCalendar(isUpdate){ //Generate New FullCalendar / Regenerate FullCalendar when isUpdate is true
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                events: "/TodoEvent/GetEvents", //Read data from TodoEventController.cs Action -> GetEvents
+                locale: '',
+                timeZone: 'local',
+                height: 700,
+                initialDate: new Date(),
+                initialView: 'dayGridMonth',
+                customButtons: {
+                    myCustomButton: {
+                    text: 'create event',
+                        click: function() {
+                            openAddEditForm(true);
+                        }
+                    }
+                },
+                headerToolbar: {
+                    left: 'prev,next today myCustomButton',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                themeSystem: 'bootstrap',
+                eventColor: '#378006',
+                eventClick: function(info) {
+                    selectedEvent = info.event;
+                    $('#myModal #eventTitle').text(selectedEvent.title);
+                        var $description = $('<div/>');
+                        $description.append($('<p/>').html('<b>Start: </b>' + formatDateInfo(selectedEvent.start)));
+                        if (info.event.end != null) {
+                            $description.append($('<p/>').html('<b>End: </b>' + formatDateInfo(selectedEvent.end)));
+                        }
+                        $description.append($('<p/>').html('<b>Description: </b>' + selectedEvent.extendedProps.description));
+                        $('#myModal #pDetails').empty().html($description);
+                    $('#myModal').modal();
+                },
+                selectable: true,
+                select: function (info) {
+                    selectedEvent = {
+                        id: 0,
+                        title: '',
+                        //description: '',
+                        start: info.start,
+                        end: info.end,
+                        allDay: false,
+                        color: ''
+                    };
+                    openAddEditForm();
+                    calendar.unselect();
+                },
+                editable: true,
+                eventDrop: function (info) {
+                    var form = $('#__AjaxAntiForgeryForm');
+                    var token = $('input[name="__RequestVerificationToken"]', form).val();
+
+                    var data = {
+                        __RequestVerificationToken: token,
+                        id: info.event.id,
+                        title: info.event.title,
+                        start: formatDateInfo(info.event.start),
+                        end: info.event.end != null ? formatDateInfo(info.event.end) : null,
+                        description: info.event.extendedProps.description,
+                        color: info.event.backgroundColor,
+                        allDay: info.event.allDay
+                    };
+
+                    SaveEvent(data);
+                }
+            });
+
+            if(isUpdate){
+                calendar.destroy();
+                calendar.refetchEvents();
+            }
+            calendar.render();
+        };
+
+        $('#btnEdit').click(function () {
+            //Open modal dialog for edit event
+            openAddEditForm();
+        });
+
+        $('#btnDelete').click(function () {
+            var form = $('#__AjaxAntiForgeryForm');
+            var token = $('input[name="__RequestVerificationToken"]', form).val();
+            if (selectedEvent != null && confirm('Are you sure?')) {
+                $.ajax({
+                    type: "POST",
+                    url: '/TodoEvent/DeleteEvent',
+                    data:
+                    {
+                        __RequestVerificationToken: token,
+                        'eventID': selectedEvent.id
+                    },
+                    success: function (data) {
+                        if (data.status) {
+                            $('#myModal').modal('hide');
+                            //Refresh the calender
+                            FetchEventAndRenderCalendar(true);
+                        }
+                    },
+                    error: function () {
+                        alert('Failed');
+                    }
+                })
+            }
+        });
+
+        $('#dtp1,#dtp2').datetimepicker({ icons: { time: 'far fa-clock' },format:'YYYY-MM-DD hh:mm:ss a' });
+
+        $('#chkIsFullDay').change(function () {
+            if ($(this).is(':checked')) {
+                $('#divEndDate').hide();
+            }
+            else {
+                $('#divEndDate').show();
+            }
+        });
+
+        function formatDateInfo(d){
+            if (d != null){
+                return moment(d).format('YYYY-MM-DD hh:mm:ss a');
+            }else{
+                return moment(new Date()).format('YYYY-MM-DD hh:mm:ss a');
+            }
+        }
+
+        function openAddEditForm(isNew) {
+            if ((selectedEvent != null) && (!isNew)) {
+                //Format start date
+                let strStart = formatDateInfo(selectedEvent.start);
+
+                //Format end date
+                let strEnd = '';
+                if(selectedEvent.end != null){
+                    strEnd = formatDateInfo(selectedEvent.end);
+                }
+
+                //Pass data to <div> myModal
+                if(selectedEvent.id > 0){
+                    $('#hdEventID').val(selectedEvent.id);
+                    $('#txtSubject').val(selectedEvent.title);
+                    $('#txtStart').val(strStart);
+                    $('#chkIsFullDay').prop("checked", selectedEvent.allDay || false);
+                    $('#chkIsFullDay').change();
+                    $('#txtEnd').val(selectedEvent.end != null ? strEnd : '');
+                    $('#txtDescription').val(selectedEvent.extendedProps.description);
+                    $('#ddThemeColor').val(selectedEvent.backgroundColor);
+                }else{
+                    $('#hdEventID').val(selectedEvent.id);
+                    $('#txtSubject').val(selectedEvent.title);
+                    $('#txtStart').val(strStart);
+                    $('#chkIsFullDay').prop("checked", selectedEvent.allDay || false);
+                    $('#chkIsFullDay').change();
+                    $('#txtEnd').val(selectedEvent.end != null ? strEnd : '');
+                    $('#txtDescription').val('');
+                    $('#ddThemeColor').val('');
+                }
+            }else{
+                $('#hdEventID').val(0);
+                $('#txtSubject').val('');
+                $('#txtStart').val('');                
+                $('#chkIsFullDay').prop("checked", "" || false);
+                $('#chkIsFullDay').change();
+                $('#txtEnd').val('');
+                $('#txtDescription').val('');
+                $('#ddThemeColor').val('');
+            }
+
+            $('#myModal').modal('hide');
+            $('#myModalSave').modal();
+        };
+
+        $('#btnSave').click(function () {
+            //Validation/
+            if ($('#txtSubject').val().trim() == "") {
+                alert('Subject required');
+                return;
+            }
+            if ($('#txtStart').val().trim() == "") {
+                alert('Start date required');
+                return;
+            }
+            if ($('#chkIsFullDay').is(':checked') == false && $('#txtEnd').val().trim() == "") {
+                alert('End date required');
+                return;
+            }
+            else {
+                var startDate = new Date($('#txtStart').val());
+                var endDate = new Date($('#txtEnd').val());
+
+                if (startDate > endDate) {
+                    alert('Invalid end date');
+                    return;
+                }
+            }
+
+            var form = $('#__AjaxAntiForgeryForm');
+            var token = $('input[name="__RequestVerificationToken"]', form).val();
+            var data = {
+                 __RequestVerificationToken: token,
+                id: $('#hdEventID').val(),
+                title: $('#txtSubject').val().trim(),
+                start: $('#txtStart').val().trim(),
+                end: $('#chkIsFullDay').is(':checked') ? null : $('#txtEnd').val().trim(),
+                description: $('#txtDescription').val(),
+                color: $('#ddThemeColor').val(),
+                allDay: $('#chkIsFullDay').is(':checked')
+            }
+
+            SaveEvent(data); // call function for submit data to the server
+        });
+
+        function SaveEvent(data) {
+
+            $.ajax({
+                type: "POST",
+                url: '/TodoEvent/SaveEvent',
+                data: data,
+                success: function (data) {
+                    if (data.status) {
+                        $('#myModalSave').modal('hide');
+                        FetchEventAndRenderCalendar(true); //update events and recreate the calendar
+                    }
+                },
+                error: function () {
+                    alert('Failed');
+                }
+            })
+        }
+    });
+</script>

@@ -1,0 +1,42 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityRole
+@inject LocalizationService Localizer
+
+@{
+    Layout = "/Views/Shared/_AdminLTE.cshtml";
+}
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+
+        <h1>@Localizer.GetLocalizedHtmlString("CREATE NEW ROLE")</h1>
+        <hr />
+
+        <section>
+            <form asp-action="Create">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">@Localizer.GetLocalizedHtmlString("NAME")</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="@Localizer.GetLocalizedHtmlString("CREATE")" class="btn btn-primary" />
+                </div>
+
+            </form>
+        </section>
+
+        <hr />
+
+        <div class="text-right">
+            <a asp-action="Index" class="btn btn-dark">@Localizer.GetLocalizedHtmlString("BACK TO LIST")</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}  

@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using AdminHubNC6.Areas.Identity.Data;
+
+@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+@inject SignInManager<AdminHubUser> SignInManager
+@inject UserManager<AdminHubUser> UserManager
+@inject LocalizationService Localizer
+@inject AuthLocalizationService AuthLocalizer
+
+@*@{
+    ViewData["Title"] = "Index";
+    }*@
+
+@*<h1>List of Users</h1>*@
+@*<hr />*@
+
+<a class="btn btn-default bg-gradient-primary btn-lg mb-1" href="~/Identity/Account/Register?returnUrl=%2F">@Localizer.GetLocalizedHtmlString("CREATE A NEW USER")</a>
+<br />
+<!-- /.row -->
+<div class="row">
+    <div class="col-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">@Localizer.GetLocalizedHtmlString("USER LIST")</h3>
+
+                @*<div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                    <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                    </button>
+                    </div>
+                    </div>
+                    </div>*@
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0" style="height: 640px;">
+                <table class="table table-head-fixed table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>@AuthLocalizer.GetLocalizedHtmlString("ID")</th>
+                            <th>@AuthLocalizer.GetLocalizedHtmlString("EMAIL")</th>
+                            <th>@AuthLocalizer.GetLocalizedHtmlString("SURNAME")</th>
+                            <th>@AuthLocalizer.GetLocalizedHtmlString("GIVEN_NAME")</th>
+                            <th>@AuthLocalizer.GetLocalizedHtmlString("USER_POST")</th>
+                            <th>@AuthLocalizer.GetLocalizedHtmlString("ROLE")</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            var u = await UserManager.FindByIdAsync(user.Id);
+                            var role = await UserManager.GetRolesAsync(u);
+                            <tr>
+                                <td>@user.Id</td>
+                                <td>@user.UserName</td>
+                                <td>@u.LastName</td>
+                                <td>@u.FirstName</td>
+                                <td>@u.UserPost</td>
+                                <td>@role.ElementAt(0)</td>
+                                <td><a href="~/Identity/Account/Manage/Index?selectedUid=@user.Id" class="btn btn-block bg-gradient-info">@Localizer.GetLocalizedHtmlString("EDIT")</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+<!-- /.row -->
+@*<div class="row">
+    <div class="col-md-6">
+    <section>
+    <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+    <td>Id</td>
+    <td>Login Email</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Role</td>
+    <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+    var u = await UserManager.FindByIdAsync(user.Id);
+    var role = await UserManager.GetRolesAsync(u);
+    <tr>
+    <td>@user.Id</td>
+    <td>@user.UserName</td>
+    <td>@u.FirstName</td>
+    <td>@u.LastName</td>
+    <td>@role.ElementAt(0)</td>
+    <td><a href="~/Identity/Account/Manage/Index?uid=@user.Id" class="btn btn-block bg-gradient-info">Edit</a></td>
+    </tr>
+    }
+    </tbody>
+    </table>
+    </section>
+    </div>
+    </div>*@

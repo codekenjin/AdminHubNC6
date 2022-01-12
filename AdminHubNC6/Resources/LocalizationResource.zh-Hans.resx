@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABOUT" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="BACK TO HOME" xml:space="preserve">
+    <value>返回首页</value>
+  </data>
+  <data name="BACK TO LIST" xml:space="preserve">
+    <value>返回列表</value>
+  </data>
+  <data name="CHANGE PASSWORD" xml:space="preserve">
+    <value>更新密码</value>
+  </data>
+  <data name="CONFIRM DELETE MSG" xml:space="preserve">
+    <value>你确定要删除这个</value>
+  </data>
+  <data name="CONTACT" xml:space="preserve">
+    <value>联络资料</value>
+  </data>
+  <data name="CREATE" xml:space="preserve">
+    <value>建立</value>
+  </data>
+  <data name="CREATE A NEW USER" xml:space="preserve">
+    <value>创建新用户</value>
+  </data>
+  <data name="CREATE NEW ROLE" xml:space="preserve">
+    <value>建立新角色</value>
+  </data>
+  <data name="CREATE PC INFO" xml:space="preserve">
+    <value>建立电脑资料</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DELETE PC INFO" xml:space="preserve">
+    <value>删除电脑资料</value>
+  </data>
+  <data name="DETAILS" xml:space="preserve">
+    <value>详细</value>
+  </data>
+  <data name="DHCP" xml:space="preserve">
+    <value>DHCP</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>更改</value>
+  </data>
+  <data name="EDIT PC INFO" xml:space="preserve">
+    <value>更改电脑资料</value>
+  </data>
+  <data name="EDIT PROFILE" xml:space="preserve">
+    <value>更改个人资讯</value>
+  </data>
+  <data name="HELLO" xml:space="preserve">
+    <value>您好</value>
+  </data>
+  <data name="HOME" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="INVENTORY NO" xml:space="preserve">
+    <value>库存编号</value>
+  </data>
+  <data name="IP ADDRESS" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="IT EQUIPMENT" xml:space="preserve">
+    <value>IT设备</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LOCATION" xml:space="preserve">
+    <value>储存位置</value>
+  </data>
+  <data name="LOGIN" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="LOGOUT" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="MANAGE EMAIL" xml:space="preserve">
+    <value>电邮管理</value>
+  </data>
+  <data name="MODEL NO" xml:space="preserve">
+    <value>型号</value>
+  </data>
+  <data name="MODIFIED BY" xml:space="preserve">
+    <value>更改者</value>
+  </data>
+  <data name="MODIFIED DATE" xml:space="preserve">
+    <value>更改日期</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="PC INFO" xml:space="preserve">
+    <value>电脑资料</value>
+  </data>
+  <data name="PC INFO DETAILS" xml:space="preserve">
+    <value>详细电脑资料</value>
+  </data>
+  <data name="PC NAME" xml:space="preserve">
+    <value>电脑名称</value>
+  </data>
+  <data name="REGISTER" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="ROLE" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="ROLE LIST" xml:space="preserve">
+    <value>角色列表</value>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>储存</value>
+  </data>
+  <data name="SERIAL NO" xml:space="preserve">
+    <value>机身编号</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>状况</value>
+  </data>
+  <data name="SYSTEM" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="USER" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="USER ADMIN" xml:space="preserve">
+    <value>用户管理</value>
+  </data>
+  <data name="USER LIST" xml:space="preserve">
+    <value>用户列表</value>
+  </data>
+  <data name="USER NAME" xml:space="preserve">
+    <value>用户名称</value>
+  </data>
+  <data name="USER POST" xml:space="preserve">
+    <value>用户职位</value>
+  </data>
+  <data name="VENDOR" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="WELCOME" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+</root>

@@ -1,0 +1,16 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    Layout = "/Views/Shared/_AdminLTE.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Confirm email";
+}
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+        <h1>@ViewData["Title"]</h1>
+        <partial name="_StatusMessage" model="Model.StatusMessage" />
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+@inject LocalizationService Localizer
+
+@{
+    Layout = "/Views/Shared/_AdminLTE.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Role List";
+}
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+        @*<h1>@ViewData["Title"]</h1>*@
+        <hr />
+
+        <a asp-action="create" class="btn btn-default bg-gradient-primary btn-lg mb-1">@Localizer.GetLocalizedHtmlString("CREATE NEW ROLE")</a>
+
+        <br />
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">@Localizer.GetLocalizedHtmlString("ROLE LIST")</h3>
+            </div>
+            <div class="card-body table-responsive p-0" style="height: max-content;">
+                <table class="table table-head-fixed table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>@Localizer.GetLocalizedHtmlString("ID")</th>
+                            <th>@Localizer.GetLocalizedHtmlString("NAME")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var role in Model)
+                        {
+                            <tr>
+                                <td>@role.Id</td>
+                                <td>@role.Name</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr />
+
+@*        <div class="text-right">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-dark">@Localizer.GetLocalizedHtmlString("BACK TO HOME")</a>
+        </div>*@
+    </div>
+</div>
