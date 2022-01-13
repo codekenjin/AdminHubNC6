@@ -126,6 +126,72 @@
   <data name="BACK TO LIST" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="CALE_BUTTON_CLOSE" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="CALE_BUTTON_CREATE_EVENT" xml:space="preserve">
+    <value>建立新行程</value>
+  </data>
+  <data name="CALE_BUTTON_DAY" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="CALE_BUTTON_EDIT" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="CALE_BUTTON_MONTH" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="CALE_BUTTON_REMOVE" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="CALE_BUTTON_SAVE" xml:space="preserve">
+    <value>储存</value>
+  </data>
+  <data name="CALE_BUTTON_TODAY" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="CALE_BUTTON_WEEK" xml:space="preserve">
+    <value>星期</value>
+  </data>
+  <data name="CALE_LABEL_EDIT_EVENT" xml:space="preserve">
+    <value>编辑行程</value>
+  </data>
+  <data name="CALE_LABEL_END_DATE" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="CALE_LABEL_FULL_DAY_EVENT" xml:space="preserve">
+    <value>是全日行程</value>
+  </data>
+  <data name="CALE_LABEL_START_DATE" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="CALE_LABEL_SUBJECT" xml:space="preserve">
+    <value>行程标题</value>
+  </data>
+  <data name="CALE_LABEL_THEME_COLOR" xml:space="preserve">
+    <value>主题颜色</value>
+  </data>
+  <data name="CALE_MSG_DEL_FAIL" xml:space="preserve">
+    <value>行程删除失败</value>
+  </data>
+  <data name="CALE_MSG_EDIT_EVENT" xml:space="preserve">
+    <value>编辑行程</value>
+  </data>
+  <data name="CALE_MSG_END_DATE_REQUIRE" xml:space="preserve">
+    <value>请输入结束日期</value>
+  </data>
+  <data name="CALE_MSG_INV_END_DATE" xml:space="preserve">
+    <value>错误的结束日期</value>
+  </data>
+  <data name="CALE_MSG_SAVE_FAIL" xml:space="preserve">
+    <value>行程储存失败</value>
+  </data>
+  <data name="CALE_MSG_START_DATE_REQUIRE" xml:space="preserve">
+    <value>请输入开始日期</value>
+  </data>
+  <data name="CALE_MSG_SUBJECT_REQUIRE" xml:space="preserve">
+    <value>请输入行程标题</value>
+  </data>
   <data name="CHANGE PASSWORD" xml:space="preserve">
     <value>更新密码</value>
   </data>
@@ -147,11 +213,20 @@
   <data name="CREATE PC INFO" xml:space="preserve">
     <value>建立电脑资料</value>
   </data>
+  <data name="DEFAULT" xml:space="preserve">
+    <value>預設</value>
+  </data>
+  <data name="DEFAULT1" xml:space="preserve">
+    <value>预设</value>
+  </data>
   <data name="DELETE" xml:space="preserve">
     <value>删除</value>
   </data>
   <data name="DELETE PC INFO" xml:space="preserve">
     <value>删除电脑资料</value>
+  </data>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>内容</value>
   </data>
   <data name="DETAILS" xml:space="preserve">
     <value>详细</value>
@@ -263,5 +338,8 @@
   </data>
   <data name="WELCOME" xml:space="preserve">
     <value>欢迎</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>是</value>
   </data>
 </root>

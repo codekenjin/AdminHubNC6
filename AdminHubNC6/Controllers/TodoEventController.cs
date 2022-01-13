@@ -27,7 +27,7 @@ namespace AdminHubNC6.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> GetEvents()
         {
-            Debug.WriteLine("GetEvents");
+            //Debug.WriteLine("GetEvents");
             var result = _context.TodoEvent;
             if (!result.Any())
             {
@@ -42,14 +42,14 @@ namespace AdminHubNC6.Controllers
         public async Task<IActionResult> SaveEvent([Bind("id,title,start,end,description,color,allDay")] TodoEventModel todoEventModel)
         {
             var status = false;
-            Debug.WriteLine("SaveEvent");
-            Debug.WriteLine("[id]:" + todoEventModel.id);
-            Debug.WriteLine("[titls]:" + todoEventModel.title);
-            Debug.WriteLine("[start]:" + todoEventModel.start);
-            Debug.WriteLine("[end]:" + todoEventModel.end);
-            Debug.WriteLine("[description]:" + todoEventModel.description);
-            Debug.WriteLine("[color]:" + todoEventModel.color);
-            Debug.WriteLine("[allDay]:" + todoEventModel.allDay);
+            //Debug.WriteLine("SaveEvent");
+            //Debug.WriteLine("[id]:" + todoEventModel.id);
+            //Debug.WriteLine("[titls]:" + todoEventModel.title);
+            //Debug.WriteLine("[start]:" + todoEventModel.start);
+            //Debug.WriteLine("[end]:" + todoEventModel.end);
+            //Debug.WriteLine("[description]:" + todoEventModel.description);
+            //Debug.WriteLine("[color]:" + todoEventModel.color);
+            //Debug.WriteLine("[allDay]:" + todoEventModel.allDay);
 
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace AdminHubNC6.Controllers
                     }
                 }
             }
-            Debug.WriteLine("[Before return]");
+            //Debug.WriteLine("[Before return]");
             return new JsonResult(new { status });
         }
 

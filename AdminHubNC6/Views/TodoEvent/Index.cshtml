@@ -1,6 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Localization
+@inject LocalizationService Localizer
+
 @{
-    var CalendarPath = "/fullcalendar";
+    const string CalendarPath = "/fullcalendar";
 }
 
 @{
@@ -16,11 +18,12 @@
     @Html.AntiForgeryToken()
 }
 
+@*Show event details modal*@
 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><span id="eventTitle"></span></h5>
+                <h4 class="modal-title"><span id="eventTitle"></span></h4>
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -32,16 +35,16 @@
                 <div class="container">
                     <div class="float-left mr-2">
                         <button id="btnDelete" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
+                            <span class="glyphicon glyphicon-remove"></span> @Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_REMOVE"))
                         </button>
                     </div>
                     <div class="float-left">
                         <button id="btnEdit" class="btn btn-success">
-                            <span class="glyphicon glyphicon-pencil"></span> Edit
+                            <span class="glyphicon glyphicon-pencil"></span> @Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_EDIT"))
                         </button>
                     </div>
                     <div class="float-right">
-                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_CLOSE"))</button>
                     </div>
                 </div>
             </div>
@@ -49,11 +52,12 @@
     </div>
 </div>
 
+@*Event editor modal*@
 <div id="myModalSave" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Save Event</h5>
+                <h5 class="modal-title">@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_EDIT_EVENT"))</h5>
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -62,11 +66,11 @@
                 <form class="col-md-12 form-horizontal">
                     <input type="hidden" id="hdEventID" value="0" />
                     <div class="form-group">
-                        <label>Subject</label>
+                        <label>@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_SUBJECT"))</label>
                         <input type="text" id="txtSubject" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label>Start</label>
+                        <label>@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_START_DATE"))</label>
                         <div class="input-group date" id="dtp1" data-target-input="nearest">
                             <input type="text" id="txtStart" class="form-control datetimepicker-input" data-target="#dtp1" />
                             <div class="input-group-append" data-target="#dtp1" data-toggle="datetimepicker">
@@ -77,11 +81,11 @@
 
                     <div class="form-group">
                         <div class="checkbox">
-                            <label><input type="checkbox" id="chkIsFullDay" checked="checked" />  Is Full Day event</label>
+                            <label><input type="checkbox" id="chkIsFullDay" checked="checked" />  @Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_FULL_DAY_EVENT"))</label>
                         </div>
                     </div>
                     <div class="form-group" id="divEndDate" style="display:none">
-                        <label>End</label>
+                        <label>@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_END_DATE"))</label>
                         <div class="input-group date" id="dtp2" data-target-input="nearest">
                             <input type="text" id="txtEnd" class="form-control datetimepicker-input" data-target="#dtp2" />
                             <div class="input-group-append" data-target="#dtp2" data-toggle="datetimepicker">
@@ -90,21 +94,25 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label>@Html.Raw(Localizer.GetLocalizedHtmlString("DESCRIPTION"))</label>
                         <textarea id="txtDescription" rows="3" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Theme Color</label>
+                        <label>@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_THEME_COLOR"))</label>
                         <select id="ddThemeColor" class="form-control">
-                            <option value="">Default</option>
+                            <option value="">@Html.Raw(Localizer.GetLocalizedHtmlString("DEFAULT"))</option>
                             <option value="red">Red</option>
                             <option value="blue">Blue</option>
                             <option value="black">Black</option>
                             <option value="green">Green</option>
+                            <option value="orange">Orange</option>
+                            <option value="grey">Grey</option>
+                            <option value="purple">Purple</option>
+                            <option value="pink">Pink</option>
                         </select>
                     </div>
-                    <button type="button" id="btnSave" class="btn btn-success">Save</button>
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    <button type="button" id="btnSave" class="btn btn-success">@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_SAVE"))</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_CLOSE"))</button>
                 </form>
             </div>
         </div>
@@ -117,21 +125,24 @@
     var selectedEvent = null;
     var calendarEl = document.getElementById('calendar');
     var calendar;
+    var calendarLang = { "en" : "", "zh-Hant" : "zh-tw", "zh-Hans" : "zh-cn"};
 
-    document.addEventListener('DOMContentLoaded', function () {
+
+    document.addEventListener('DOMContentLoaded', function () {// When page loaded
+
         FetchEventAndRenderCalendar();
 
         function FetchEventAndRenderCalendar(isUpdate){ //Generate New FullCalendar / Regenerate FullCalendar when isUpdate is true
             calendar = new FullCalendar.Calendar(calendarEl, {
                 events: "/TodoEvent/GetEvents", //Read data from TodoEventController.cs Action -> GetEvents
-                locale: '',
+                locale: calendarLang['@requestCulture?.RequestCulture.UICulture.Name'],
                 timeZone: 'local',
                 height: 700,
                 initialDate: new Date(),
                 initialView: 'dayGridMonth',
                 customButtons: {
                     myCustomButton: {
-                    text: 'create event',
+                    text: '@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_CREATE_EVENT"))',
                         click: function() {
                             openAddEditForm(true);
                         }
@@ -142,17 +153,23 @@
                     center: 'title',
                     right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
+                buttonText: {
+                    today: '@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_TODAY"))',
+                    month: '@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_MONTH"))',
+                    week: '@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_WEEK"))',
+                    day: '@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_BUTTON_DAY"))'
+                },
                 themeSystem: 'bootstrap',
                 eventColor: '#378006',
                 eventClick: function(info) {
                     selectedEvent = info.event;
                     $('#myModal #eventTitle').text(selectedEvent.title);
                         var $description = $('<div/>');
-                        $description.append($('<p/>').html('<b>Start: </b>' + formatDateInfo(selectedEvent.start)));
+                        $description.append($('<p/>').html('<b>@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_START_DATE")): </b>' + formatDateInfo(selectedEvent.start)));
                         if (info.event.end != null) {
-                            $description.append($('<p/>').html('<b>End: </b>' + formatDateInfo(selectedEvent.end)));
+                            $description.append($('<p/>').html('<b>@Html.Raw(Localizer.GetLocalizedHtmlString("CALE_LABEL_END_DATE")): </b>' + formatDateInfo(selectedEvent.end)));
                         }
-                        $description.append($('<p/>').html('<b>Description: </b>' + selectedEvent.extendedProps.description));
+                        $description.append($('<p/>').html('<b>@Html.Raw(Localizer.GetLocalizedHtmlString("DESCRIPTION")): </b>' + (selectedEvent.extendedProps.description == null? '' : selectedEvent.extendedProps.description)));
                         $('#myModal #pDetails').empty().html($description);
                     $('#myModal').modal();
                 },
@@ -222,7 +239,7 @@
                         }
                     },
                     error: function () {
-                        alert('Failed');
+                        alert('@Html.Raw(@Localizer.GetLocalizedHtmlString("CALE_MSG_SAVE_FAIL"))');
                     }
                 })
             }
@@ -281,7 +298,7 @@
             }else{
                 $('#hdEventID').val(0);
                 $('#txtSubject').val('');
-                $('#txtStart').val('');                
+                $('#txtStart').val('');
                 $('#chkIsFullDay').prop("checked", "" || false);
                 $('#chkIsFullDay').change();
                 $('#txtEnd').val('');
@@ -296,15 +313,15 @@
         $('#btnSave').click(function () {
             //Validation/
             if ($('#txtSubject').val().trim() == "") {
-                alert('Subject required');
+                alert('@Html.Raw(@Localizer.GetLocalizedHtmlString("CALE_MSG_SUBJECT_REQUIRE"))');
                 return;
             }
             if ($('#txtStart').val().trim() == "") {
-                alert('Start date required');
+                alert('@Html.Raw(@Localizer.GetLocalizedHtmlString("CALE_MSG_START_DATE_REQUIRE"))');
                 return;
             }
             if ($('#chkIsFullDay').is(':checked') == false && $('#txtEnd').val().trim() == "") {
-                alert('End date required');
+                alert('@Html.Raw(@Localizer.GetLocalizedHtmlString("CALE_MSG_END_DATE_REQUIRE"))');
                 return;
             }
             else {
@@ -312,7 +329,7 @@
                 var endDate = new Date($('#txtEnd').val());
 
                 if (startDate > endDate) {
-                    alert('Invalid end date');
+                    alert('@Html.Raw(@Localizer.GetLocalizedHtmlString("CALE_MSG_INV_END_DATE"))');
                     return;
                 }
             }
@@ -346,7 +363,7 @@
                     }
                 },
                 error: function () {
-                    alert('Failed');
+                    alert('@Html.Raw(@Localizer.GetLocalizedHtmlString("CALE_MSG_SAVE_FAIL"))');
                 }
             })
         }

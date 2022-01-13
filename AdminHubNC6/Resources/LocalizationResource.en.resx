@@ -132,6 +132,69 @@
   <data name="BAR_CODE_SHORT_INVENTORY_NO" xml:space="preserve">
     <value>Barcode / &lt;br&gt; Short Inventory No.</value>
   </data>
+  <data name="CALE_BUTTON_CLOSE" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CALE_BUTTON_CREATE_EVENT" xml:space="preserve">
+    <value>Create Event</value>
+  </data>
+  <data name="CALE_BUTTON_DAY" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="CALE_BUTTON_EDIT" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CALE_BUTTON_MONTH" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="CALE_BUTTON_REMOVE" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="CALE_BUTTON_SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CALE_BUTTON_TODAY" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="CALE_BUTTON_WEEK" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="CALE_LABEL_EDIT_EVENT" xml:space="preserve">
+    <value>Edit event</value>
+  </data>
+  <data name="CALE_LABEL_END_DATE" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="CALE_LABEL_FULL_DAY_EVENT" xml:space="preserve">
+    <value>Is Full day event</value>
+  </data>
+  <data name="CALE_LABEL_START_DATE" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="CALE_LABEL_SUBJECT" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="CALE_LABEL_THEME_COLOR" xml:space="preserve">
+    <value>Theme color</value>
+  </data>
+  <data name="CALE_MSG_DEL_FAIL" xml:space="preserve">
+    <value>Event delete failure</value>
+  </data>
+  <data name="CALE_MSG_END_DATE_REQUIRE" xml:space="preserve">
+    <value>End date required</value>
+  </data>
+  <data name="CALE_MSG_INV_END_DATE" xml:space="preserve">
+    <value>Invalid end date</value>
+  </data>
+  <data name="CALE_MSG_SAVE_FAIL" xml:space="preserve">
+    <value>Event save failure</value>
+  </data>
+  <data name="CALE_MSG_START_DATE_REQUIRE" xml:space="preserve">
+    <value>Start date required</value>
+  </data>
+  <data name="CALE_MSG_SUBJECT_REQUIRE" xml:space="preserve">
+    <value>Subject required</value>
+  </data>
   <data name="CHANGE PASSWORD" xml:space="preserve">
     <value>Change Password</value>
   </data>
@@ -161,6 +224,9 @@
   </data>
   <data name="CREATE RECORD" xml:space="preserve">
     <value>Create New Record</value>
+  </data>
+  <data name="DEFAULT" xml:space="preserve">
+    <value>Default</value>
   </data>
   <data name="DELETE" xml:space="preserve">
     <value>Delete</value>
@@ -371,5 +437,8 @@
   </data>
   <data name="WELCOME" xml:space="preserve">
     <value>Welcome</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Yes</value>
   </data>
 </root>
