@@ -12,6 +12,7 @@ namespace AdminHubNC6.Controllers
     {
         private readonly TodoEventDbContext _context;
 
+        public IActionResult testing() { return View(); }
         public TodoEventController(TodoEventDbContext context)
         {
             _context = context;

@@ -211,32 +211,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netCore6/AdminHubNC6/AdminHubNC6/Views/TodoEvent/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0V2ZW50XENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/netCore6/AdminHubNC6/AdminHubNC6/Views/TodoEvent/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0V2ZW50XERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/netCore6/AdminHubNC6/AdminHubNC6/Views/TodoEvent/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0V2ZW50XERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/netCore6/AdminHubNC6/AdminHubNC6/Views/TodoEvent/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0V2ZW50XEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/netCore6/AdminHubNC6/AdminHubNC6/Views/TodoEvent/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0V2ZW50XEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/netCore6/AdminHubNC6/AdminHubNC6/Views/Todo/Calendar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xDYWxlbmRhci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/netCore6/AdminHubNC6/AdminHubNC6/Views/Todo/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/netCore6/AdminHubNC6/AdminHubNC6/Views/User/Index.cshtml]

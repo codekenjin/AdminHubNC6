@@ -132,6 +132,9 @@
   <data name="BAR_CODE_SHORT_INVENTORY_NO" xml:space="preserve">
     <value>Barcode / &lt;br&gt; Short Inventory No.</value>
   </data>
+  <data name="CALENDAR" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
   <data name="CALE_BUTTON_CLOSE" xml:space="preserve">
     <value>Close</value>
   </data>

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AdminHubNC6.Migrations.TodoEventDb
 {
-    public partial class TodoEventInit : Migration
+    public partial class TodoEvent : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

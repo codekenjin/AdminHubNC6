@@ -18,7 +18,7 @@
 }
 
 @{
-    var ThemePath = "/Theme/AdminLTE-3.2.0";
+    const string ThemePath = "/Theme/AdminLTE-3.2.0";
 }
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="#" class="nav-link">@Localizer.GetLocalizedHtmlString("CONTACT")</a>
                 </li>*@
                 <li class="nav-item d-none d-sm-inline-block">                    
-                    <a class="nav-link" asp-area="" asp-controller="TodoEvent" asp-action="Index">Calendar</a>
+                    <a class="nav-link" asp-area="" asp-controller="TodoEvent" asp-action="Index">@Html.Raw(Localizer.GetLocalizedHtmlString("CALENDAR"))</a>
                 </li>
             </ul>
 

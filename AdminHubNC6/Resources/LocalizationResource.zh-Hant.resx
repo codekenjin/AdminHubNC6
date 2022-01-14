@@ -126,6 +126,9 @@
   <data name="BACK TO LIST" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="CALENDAR" xml:space="preserve">
+    <value>行事曆</value>
+  </data>
   <data name="CALE_BUTTON_CLOSE" xml:space="preserve">
     <value>關閉</value>
   </data>

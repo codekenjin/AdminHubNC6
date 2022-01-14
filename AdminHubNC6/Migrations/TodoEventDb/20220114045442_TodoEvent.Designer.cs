@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdminHubNC6.Migrations.TodoEventDb
 {
     [DbContext(typeof(TodoEventDbContext))]
-    [Migration("20220104011558_TodoEventInit")]
-    partial class TodoEventInit
+    [Migration("20220114045442_TodoEvent")]
+    partial class TodoEvent
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
