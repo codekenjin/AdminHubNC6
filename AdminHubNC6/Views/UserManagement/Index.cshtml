@@ -61,7 +61,16 @@
                                 <td>@u.FirstName</td>
                                 <td>@u.UserPost</td>
                                 <td>@role.ElementAt(0)</td>
-                                <td><a href="~/Identity/Account/Manage/Index?selectedUid=@user.Id" class="btn btn-block bg-gradient-info">@Localizer.GetLocalizedHtmlString("EDIT")</a></td>
+                                <td>
+                                    @if (user.UserName != "admin@admin.com")
+                                    {
+                                        <a href="~/Identity/Account/Manage/EditUserInfo?selectedUid=@user.Id" class="btn btn-block bg-gradient-info">@Localizer.GetLocalizedHtmlString("EDIT")</a>
+                                    }
+                                    else
+                                    {
+                                        @Html.Raw("---")
+                                    }
+                                </td>
                             </tr>
                         }
                     </tbody>

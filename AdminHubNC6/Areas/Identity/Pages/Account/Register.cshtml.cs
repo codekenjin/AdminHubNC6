@@ -94,6 +94,12 @@ namespace AdminHubNC6.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            [Required]
+            [DataType(DataType.PhoneNumber)]
+            [RegularExpression("^[2-9][0-9]{7}$", ErrorMessage = "Invalid Hong Kong/China Mobile Phone number")]
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.

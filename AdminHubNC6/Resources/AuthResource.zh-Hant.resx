@@ -262,6 +262,9 @@
   <data name="CONFIRM_EMAIL_TEXT" xml:space="preserve">
     <value>感謝您確認電子郵箱。</value>
   </data>
+  <data name="CONFIRM_LINK_CHANGE_EMAIL" xml:space="preserve">
+    <value>用於更改電子郵件地址的確認連結已發送。請查看你的電子郵箱。</value>
+  </data>
   <data name="CONFIRM_PASSWORD" xml:space="preserve">
     <value>確認密碼</value>
   </data>
@@ -568,12 +571,18 @@
   <data name="MANAGE_CHANGE_ACCOUNT_SETTINGS" xml:space="preserve">
     <value>修改您的帳號設置</value>
   </data>
+  <data name="MANAGE_EMAIL" xml:space="preserve">
+    <value>管理電郵</value>
+  </data>
   <data name="MANAGE_YOUR_ACCOUNT" xml:space="preserve">
     <value>管理您的帳號</value>
   </data>
   <data name="MustCallAddIdentity" xml:space="preserve">
     <value>必須在ServiceCollection上調用AddIdentity。</value>
     <comment>Error when AddIdentity is not called</comment>
+  </data>
+  <data name="NEW_EMAIL" xml:space="preserve">
+    <value>新電子郵箱</value>
   </data>
   <data name="NEW_PASSWORD" xml:space="preserve">
     <value>新密碼</value>
@@ -596,6 +605,9 @@
   <data name="NullSecurityStamp" xml:space="preserve">
     <value>用戶的SecurityStamp不能為空。</value>
     <comment>Error when a user's security stamp is null.</comment>
+  </data>
+  <data name="OLD_PASSWORD" xml:space="preserve">
+    <value>舊密碼</value>
   </data>
   <data name="OR" xml:space="preserve">
     <value>或</value>
@@ -754,7 +766,10 @@
     <value>您的個人資訊更新成功</value>
   </data>
   <data name="STATUS_PROFILE_UPDATED" xml:space="preserve">
-    <value>您的個人資訊更新成功</value>
+    <value>個人資訊更新成功</value>
+  </data>
+  <data name="STATUS_PROFILE_UPDATED_FAILURE" xml:space="preserve">
+    <value>個人資訊更新失敗</value>
   </data>
   <data name="STATUS_UPDATE_PROFILE_EMAIL_SEND" xml:space="preserve">
     <value>已發送驗證郵件，請檢查您的電子郵箱。</value>
@@ -892,5 +907,8 @@
   </data>
   <data name="YES" xml:space="preserve">
     <value>是的</value>
+  </data>
+  <data name="YOUR_EMAIL_IS_UNCHANGED" xml:space="preserve">
+    <value>你的電子郵件地址沒有更改。</value>
   </data>
 </root>

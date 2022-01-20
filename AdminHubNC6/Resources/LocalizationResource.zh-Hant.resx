@@ -297,6 +297,9 @@
   <data name="PC NAME" xml:space="preserve">
     <value>電腦名稱</value>
   </data>
+  <data name="PHONENUMBER" xml:space="preserve">
+    <value>聯絡電話</value>
+  </data>
   <data name="REGISTER" xml:space="preserve">
     <value>登記</value>
   </data>
@@ -333,6 +336,12 @@
   <data name="USER POST" xml:space="preserve">
     <value>用戶職位</value>
   </data>
+  <data name="USERINFO" xml:space="preserve">
+    <value>用戶資料</value>
+  </data>
+  <data name="USERMANAGEMENT" xml:space="preserve">
+    <value>用戶管理</value>
+  </data>
   <data name="VENDOR" xml:space="preserve">
     <value>供應商</value>
   </data>
@@ -340,6 +349,6 @@
     <value>歡迎</value>
   </data>
   <data name="YES" xml:space="preserve">
-    <value>Yes</value>
+    <value>是</value>
   </data>
 </root>

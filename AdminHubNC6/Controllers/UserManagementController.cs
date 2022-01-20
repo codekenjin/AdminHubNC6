@@ -7,12 +7,12 @@ using System.Data;
 
 namespace InfoHub.Controllers
 {
-    public class UserController : Controller
+    public class UserManagementController : Controller
     {
         private UserManager<AdminHubUser> UserManager;
-        private readonly ILogger<UserController> _logger;
+        private readonly ILogger<UserManagementController> _logger;
 
-        public UserController(UserManager<AdminHubUser> userManager, ILogger<UserController> logger)
+        public UserManagementController(UserManager<AdminHubUser> userManager, ILogger<UserManagementController> logger)
         {
             this.UserManager = userManager;
             _logger = logger;

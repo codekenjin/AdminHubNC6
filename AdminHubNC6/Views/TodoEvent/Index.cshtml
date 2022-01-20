@@ -126,14 +126,20 @@
     var selectedEvent = null;
     var calendarEl = document.getElementById('calendar');
     var calendar;
-    var calendarLang = { "en" : "", "zh-Hant" : "zh-tw", "zh-Hans" : "zh-cn"};
+    var calendarLang = { "en" : "", "zh-Hant" : "zh-tw", "zh-Hans" : "zh-cn"}; //change Fullcalendar's locale followed by the current selected language
 
 
-    document.addEventListener('DOMContentLoaded', function () {// When page loaded
+    document.addEventListener('DOMContentLoaded', function () {// When page loaded start to do:
 
         FetchEventAndRenderCalendar();
 
-        function FetchEventAndRenderCalendar(isUpdate){ //Generate New FullCalendar / Regenerate FullCalendar when isUpdate is true
+        function FetchEventAndRenderCalendar(isUpdate){ //Generate New FullCalendar and Regenerate FullCalendar when isUpdate is true
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
 
             calendar = new FullCalendar.Calendar(calendarEl, {
                 eventMouseEnter: function(info) {
@@ -145,6 +151,11 @@
                     });
                 },
                 events: "/TodoEvent/GetEvents", //Read data from TodoEventController.cs Action -> GetEvents
+                eventTimeFormat: { // like '7:30pm'
+                    hour: 'numeric',
+                    minute: '2-digit',    
+                    meridiem: true
+                },
                 locale: calendarLang['@requestCulture?.RequestCulture.UICulture.Name'],
                 timeZone: 'local',
                 height: 700,

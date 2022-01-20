@@ -249,6 +249,9 @@
   <data name="CONFIRM_EMAIL_TEXT" xml:space="preserve">
     <value>Thank you for confirming your email.</value>
   </data>
+  <data name="CONFIRM_LINK_CHANGE_EMAIL" xml:space="preserve">
+    <value>Confirmation link to change email sent. Please check your email.</value>
+  </data>
   <data name="CONFIRM_PASSWORD" xml:space="preserve">
     <value>Confirm Password</value>
   </data>
@@ -423,14 +426,23 @@
   <data name="MANAGE_CAHNGE_ACCOUNT_SETTINGS" xml:space="preserve">
     <value>Change your account settings</value>
   </data>
+  <data name="MANAGE_EMAIL" xml:space="preserve">
+    <value>Manage Email</value>
+  </data>
   <data name="MANAGE_YOUR_ACCOUNT" xml:space="preserve">
     <value>Manage your account</value>
+  </data>
+  <data name="NEW_EMAIL" xml:space="preserve">
+    <value>E-Mail</value>
   </data>
   <data name="NEW_PASSWORD" xml:space="preserve">
     <value>New password</value>
   </data>
   <data name="NEW_PASSWORD_REQUIRED" xml:space="preserve">
     <value>New password required</value>
+  </data>
+  <data name="OLD_PASSWORD" xml:space="preserve">
+    <value>Old password</value>
   </data>
   <data name="OR" xml:space="preserve">
     <value>or</value>
@@ -535,7 +547,10 @@
     <value>You have generated new recovery codes.</value>
   </data>
   <data name="STATUS_PROFILE_UPDATED" xml:space="preserve">
-    <value>Your profile has been updated</value>
+    <value>Profile has been updated</value>
+  </data>
+  <data name="STATUS_PROFILE_UPDATED_FAILURE" xml:space="preserve">
+    <value>Profile update failure</value>
   </data>
   <data name="STATUS_UPDATE_PROFILE_EMAIL_SEND" xml:space="preserve">
     <value>Verification email sent. Please check your email.</value>
@@ -572,5 +587,8 @@
   </data>
   <data name="VERIFY" xml:space="preserve">
     <value>Verify</value>
+  </data>
+  <data name="YOUR_EMAIL_IS_UNCHANGED" xml:space="preserve">
+    <value>Your email is unchanged</value>
   </data>
 </root>

@@ -18,14 +18,15 @@ namespace InfoHub.Services
 
                 using (var smtp = new SmtpClient())
                 {
-                    var credential = new NetworkCredential
-                    {
-                        UserName = "user@outlook.com",  // replace with valid value
-                        Password = "password"  // replace with valid value
-                    };
-                    smtp.Credentials = credential;
-                    smtp.Port = 25;
-                    smtp.EnableSsl = true;
+                    //var credential = new NetworkCredential
+                    //{
+                    //    UserName = "user@outlook.com",  // replace with valid value
+                    //    Password = "password"  // replace with valid value
+                    //};
+                    //smtp.Credentials = credential;
+                    //smtp.Port = 25;
+                    //smtp.EnableSsl = true;
+                    smtp.Host = "mail2.edb.gov.hk"; // unquote for production
                     smtp.Send(message);
                 }
             }

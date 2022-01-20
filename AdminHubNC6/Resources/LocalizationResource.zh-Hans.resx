@@ -300,6 +300,9 @@
   <data name="PC NAME" xml:space="preserve">
     <value>电脑名称</value>
   </data>
+  <data name="PHONENUMBER" xml:space="preserve">
+    <value>联络电话</value>
+  </data>
   <data name="REGISTER" xml:space="preserve">
     <value>登记</value>
   </data>
@@ -335,6 +338,12 @@
   </data>
   <data name="USER POST" xml:space="preserve">
     <value>用户职位</value>
+  </data>
+  <data name="USERINFO" xml:space="preserve">
+    <value>用户资料</value>
+  </data>
+  <data name="USERMANAGEMENT" xml:space="preserve">
+    <value>用户管理</value>
   </data>
   <data name="VENDOR" xml:space="preserve">
     <value>供应商</value>

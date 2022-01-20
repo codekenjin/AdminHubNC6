@@ -13,9 +13,9 @@
     ViewData["UserNameRole"] = ViewData["UserFullName"] + " - " + ViewData["UserRole"];
 }
 
-@{
+@*@{
     ViewData["Title"] = "_AdminLTE";
-}
+}*@
 
 @{
     const string ThemePath = "/Theme/AdminLTE-3.2.0";
@@ -139,14 +139,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <a href="#" class="nav-link active">
                                     <i class="nav-icon far fa-address-card"></i>
                                     <p>
-                                        @Localizer.GetLocalizedHtmlString("USER")
+                                        @Localizer.GetLocalizedHtmlString("USERMANAGEMENT")
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
+                                     <li class="nav-item">
+                                        <a href="~/Identity/Account/Register?returnUrl=%2F" class="nav-link">
+                                            <i class="far fa-edit nav-icon"></i>
+                                            <p>@Localizer.GetLocalizedHtmlString("REGISTER")</p>
+                                        </a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a asp-area="" asp-controller="UserManagement" asp-action="Index" class="nav-link">
+                                            <i class="fas fa-user-tie nav-icon"></i>
+                                            <p>@Localizer.GetLocalizedHtmlString("USERINFO")</p>
+                                        </a>
+                                    </li>
                                     <li class="nav-item">
-                                        <a href="~/role" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
+                                        <a asp-area="" asp-controller="RoleManagement" asp-action="Index" class="nav-link">                                        
+                                            <i class="fas fa-users nav-icon"></i>
                                             <p>@Localizer.GetLocalizedHtmlString("ROLE")</p>
                                         </a>
                                     </li>

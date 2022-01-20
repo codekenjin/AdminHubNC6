@@ -339,6 +339,9 @@
   <data name="PCNAME" xml:space="preserve">
     <value>PC Name</value>
   </data>
+  <data name="PHONENUMBER" xml:space="preserve">
+    <value>Phone No.</value>
+  </data>
   <data name="QUANTITY" xml:space="preserve">
     <value>Quantity</value>
   </data>
@@ -407,6 +410,12 @@
   </data>
   <data name="USER POST" xml:space="preserve">
     <value>User Post</value>
+  </data>
+  <data name="USERINFO" xml:space="preserve">
+    <value>User Info.</value>
+  </data>
+  <data name="USERMANAGEMENT" xml:space="preserve">
+    <value>User management</value>
   </data>
   <data name="USERNAME" xml:space="preserve">
     <value>User Name</value>

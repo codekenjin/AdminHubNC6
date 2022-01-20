@@ -1,0 +1,46 @@
+﻿@using System.Diagnostics
+@inject UserManager<AdminHubUser> UserManager
+
+@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+
+@{
+    //if ((string)ViewData["uid"] != "") //selected user
+    if (ViewData["selectedUid"] != null) //selected user
+    {
+        var user = await UserManager.FindByIdAsync((string)ViewData["selectedUid"]);
+        //Debug.WriteLine("@ViewData:" + ViewData["selectedUid"]);
+        //Debug.WriteLine("@user:" + user);
+        ViewData["UserFullName"] = user.FirstName + " " + user.LastName;
+        ViewData["UserNamePost"] = ViewData["UserFullName"] + " - " + user.UserPost;
+    }
+}
+
+@*<h1>Manage your account</h1>*@
+
+<div>
+    @*<h2>Change your account settings</h2>
+        <hr />*@
+    <h4>@ViewData["UserNamePost"]</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_EditUserInfoManageNav" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InfoHub.Controllers
 {
-    public class RoleController : Controller
+    public class RoleManagementController : Controller
     {
         private RoleManager<IdentityRole> RoleManager;
 
-        public RoleController(RoleManager<IdentityRole> roleManager)
+        public RoleManagementController(RoleManager<IdentityRole> roleManager)
         {
             this.RoleManager = roleManager;
         }

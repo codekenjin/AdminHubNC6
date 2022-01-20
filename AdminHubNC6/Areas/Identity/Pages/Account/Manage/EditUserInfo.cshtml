@@ -1,0 +1,61 @@
+﻿@page
+@model EditUserInfoModel
+@inject AuthLocalizationService AuthLocalizer
+@{
+    Layout = "/Areas/Identity/Pages/Account/Manage/_EditUserInfoLayout.cshtml";
+}
+
+@{
+    ViewData["Title"] = AuthLocalizer.GetLocalizedHtmlString("PROFILE");
+    ViewData["ActivePage"] = ManageNavPages.Index;
+    var roles = (List<IdentityRole>)ViewData["roles"];
+}
+
+<h3>@ViewData["Title"]</h3>
+
+<div class="row">    
+    <div class="col-md-6">
+        <partial name="_StatusMessage" for="StatusMessage" />
+        <form id="profile-form" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username">@AuthLocalizer.GetLocalizedHtmlString("EMAIL") (@AuthLocalizer.GetLocalizedHtmlString("LOGIN_USE"))</label>
+                <input asp-for="Username" class="form-control" disabled />
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.LastName">@AuthLocalizer.GetLocalizedHtmlString("SURNAME")</label>
+                <input asp-for="Input.LastName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.FirstName">@AuthLocalizer.GetLocalizedHtmlString("GIVEN_NAME")</label>
+                <input asp-for="Input.FirstName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.UserPost">@AuthLocalizer.GetLocalizedHtmlString("USER_POST")</label>
+                <input asp-for="Input.UserPost" class="form-control" />
+            </div>           
+            <div class="form-group">
+                <label asp-for="Input.PhoneNumber" class="form-label">@AuthLocalizer.GetLocalizedHtmlString("PHONE_NUMBER")</label>
+                <input asp-for="Input.PhoneNumber" class="form-control" />                
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+             @ViewData["selectedRole"]
+            <div class="form-group">
+                <label asp-for="Input.RoleName">@AuthLocalizer.GetLocalizedHtmlString("ROLE")</label>
+                <select asp-for="Input.RoleName" class="form-control" asp-items='new SelectList(roles,"Id","Name")'>
+                </select>
+                <span asp-validation-for="Input.RoleName" class="text-danger"></span>
+            </div>
+            <input asp-for="Input.SelectedUid" type="hidden" class="form-control" value="@ViewData["SelectedUid"]" />
+            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('Input_RoleName').value = "@ViewData["selectedRoleId"]";
+</script>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
