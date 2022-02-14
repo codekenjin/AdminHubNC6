@@ -9772,27 +9772,22 @@
   },
   "packageFolders": {
     "C:\\Users\\kenng\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\netCore6\\AdminHubNC6\\AdminHubNC6\\AdminHubNC6.csproj",
+      "projectUniqueName": "D:\\Project\\AdminHubNC6\\AdminHubNC6\\AdminHubNC6.csproj",
       "projectName": "AdminHubNC6",
-      "projectPath": "D:\\netCore6\\AdminHubNC6\\AdminHubNC6\\AdminHubNC6.csproj",
+      "projectPath": "D:\\Project\\AdminHubNC6\\AdminHubNC6\\AdminHubNC6.csproj",
       "packagesPath": "C:\\Users\\kenng\\.nuget\\packages\\",
-      "outputPath": "D:\\netCore6\\AdminHubNC6\\AdminHubNC6\\obj\\",
+      "outputPath": "D:\\Project\\AdminHubNC6\\AdminHubNC6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\kenng\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -9864,7 +9859,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

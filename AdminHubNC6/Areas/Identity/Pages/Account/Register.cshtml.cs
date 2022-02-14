@@ -149,6 +149,7 @@ namespace AdminHubNC6.Areas.Identity.Pages.Account
                     user.FirstName = Input.FirstName;
                     user.LastName = Input.LastName;
                     user.UserPost = Input.UserPost;
+                    user.PhoneNumber = Input.PhoneNumber;
 
                     await _userManager.AddToRoleAsync(user, role.Name); // Add seleted User Role to Db
 
@@ -173,9 +174,9 @@ namespace AdminHubNC6.Areas.Identity.Pages.Account
                     body = body.Replace("{UserName}", Input.Email);
 
                     //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        //$"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email - EROP Membership Registration", body);
+                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email - Membership Registration", body);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
